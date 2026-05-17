@@ -1,0 +1,146 @@
+:root {
+  --bg: #0a0a0a;
+  --text-main: #fff;
+  --text-muted: #888888;
+  --border: #222;
+  --border-hover: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  letter-spacing: -0.01em;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.profile {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.profile-img:hover {
+  filter: grayscale(0%);
+}
+
+.profile h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.verified-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.profile p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.links-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.link-card {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 24px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.link-card:hover {
+  border-color: var(--border-hover);
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.link-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.arrow-icon {
+  opacity: 0;
+  color: var(--text-main);
+  transform: translateX(-10px);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.link-card:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.social-icon {
+  opacity: 0.75;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
